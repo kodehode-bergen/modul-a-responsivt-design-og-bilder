@@ -1,0 +1,92 @@
+html {
+  font-size: 8px;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.fixed-measurements {
+  width: 900px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+div {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+}
+#div1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+  width: 20ch;
+} /*Baserer seg på vidden til karakteren 0 i den valgte fonten. Spesielt nyttig i inputfelt.*/
+
+#div2 {
+  font-size: 120px;
+}
+#inner-div {
+  background: blue;
+  width: 2em;
+} /*Baserer seg på font-størrelsen til foreldreelementet. I dette tilfellet #div2*/
+#div3 {
+  background-color: red;
+  width: 2rem;
+} /*Baserer seg på fontstørrelsen som er satt i root-elementet (html)*/
+
+.responsive-measurements {
+  background-color: lightcoral;
+  height: 70vh;
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+} /*Prosenvtise mål av viewport height/width elementet ditt skal ta opp.*/
+#responsive1 {
+  background-color: brown;
+  min-height: 25%;
+  min-width: 25%;
+  padding: 10px;
+} /*Tar opp minimum 25% av plassen i høyde og bredde basert på størrelsen på foreldreelementet- avhengig av innhold*/
+#aside {
+  background-color: white;
+  width: 300px;
+  height: 300px;
+}
+#responsive2 {
+  background-color: yellow;
+  width: 30%;
+  height: 30%;
+} /*Tar opp 30% av den tilgjengelige plassen i foreldreelementet, uavhengig av innhold.*/
+#responsive3 {
+  background-color: red;
+  max-width: 30%;
+  max-height: 30%;
+} /*Basert på innholdet, vil containeren bare ta opp *maks* 30% av foreldreelementet*/
+/* img {
+  margin-top: 30px;
+  width: 200px;
+  height: auto;
+  /* object-fit: scale-down;} */
+/*Object-fit skalerer bildene basert på verdi-  
+cover skal dekke dimensjonene som er gitt, men risikerer å bli croppet for å passe inn i de gitte målene.
+contain skal beholde aspect ratio, men resizer bildet for å basse innenfor de gitte dimensjonene
+fill fyller de gitte dimensjonene, men kan strekke og skvise bildet sammen.
+none gjør ingenting, mens scale-down skalerer ned bildet til den minste versjonen, enten none eller contain. */
+
+/*Raster-filer: JPG og PNG- laget i pixler, mister kvalitet når bildet skaleres opp og ned. */
+
+/* img {
+  width: 50%;
+  height: auto;
+} */
+/*SVG skaleres i det uendelige uten å miste kvalitet, og er ideell å bruke når man skal lage et responsivt design.*/
